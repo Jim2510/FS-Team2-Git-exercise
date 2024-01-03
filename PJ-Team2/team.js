@@ -39,7 +39,21 @@ const students = [{
     petName: "Walter"
 
 
-}
+},
+{
+    name: "David",
+    surname: "Bodrug",
+    age: 22,
+    city: "Milano",
+    hobby: "Gym",
+    favoriteFood: "Sushi",
+    favoriteVideoGame: "COD",
+    favoriteFilm: "Joker",
+    favoriteBook: "you & me",
+    petName: "Pollon"
+
+
+},
 
 ]
 
