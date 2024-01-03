@@ -79,3 +79,23 @@ function task2(students) {
 task2(students)
 /*Creo una funzione che mi ritorna un array ordinato per età crescente(utilizzando il metodo sort che compara le proprietà age degli oggetti).
 Tramite il metodo foreach mi stampo il nome e l'età degli oggetti*/
+
+
+function calculateMiddleAge(students) {
+
+    // utilizzo del metodo map per ritornare un nuovo array con le proprietà age degli oggetti ordinate.
+    const ages = students.map(student => student.age).sort((a, b) => a - b);
+    // indice età intermedia
+    const middleIndex = Math.floor(ages.length / 2);
+    // applicazione di middleIndex sull'array mappato
+    const middleAge = ages[middleIndex];
+  
+    // metodo find che restituisce solo un elemento che rispecchia la condizione che restituisce l'emento desiderato comparandolo con la
+    // variabile middleAge
+    const middleAgedStudent = students.find(student => student.age === middleAge);
+    console.log(`Middle age student: ${middleAgedStudent.name} - ${middleAgedStudent.age}`);
+  }
+  
+
+  // chiamata della funzione
+  calculateMiddleAge(students);
