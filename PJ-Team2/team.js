@@ -42,3 +42,30 @@ const students = [{
 }
 
 ]
+
+function nome(student) {
+
+    student.sort(function (a, b) {
+        if (a.name < b.name) {
+            return -1;
+        }
+        if (a.name > b.name) {
+            return 1;
+        }
+        return 0;
+    }).forEach(element => console.log(element.name))
+
+    student.sort(function (a, b) {
+        if (a.surname < b.surname) {
+            return -1;
+        }
+        if (a.surname > b.surname) {
+            return 1;
+        }
+        return 0;
+    }).forEach(element => console.log(element.surname))
+
+}
+nome(students)
+
+//utilizzato metodo 'sort()' per mettere in ordine alfabetico comparandole proprieta 'name' e 'surname' dell oggetto e il metodo 'forEac()' per iterare l array .
