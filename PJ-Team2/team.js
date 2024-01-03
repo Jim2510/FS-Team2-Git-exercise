@@ -69,3 +69,13 @@ function nome(student) {
 nome(students)
 
 //utilizzato metodo 'sort()' per mettere in ordine alfabetico comparandole proprieta 'name' e 'surname' dell oggetto e il metodo 'forEac()' per iterare l array .
+
+// - Print the team in age order (name age).
+function task2(students) {
+    return students.sort((student, student2) => student.age - student2.age)
+        .forEach((student) => console.log(student.name, student.age))
+
+}
+task2(students)
+/*Creo una funzione che mi ritorna un array ordinato per età crescente(utilizzando il metodo sort che compara le proprietà age degli oggetti).
+Tramite il metodo foreach mi stampo il nome e l'età degli oggetti*/
