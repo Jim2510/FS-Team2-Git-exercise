@@ -39,7 +39,21 @@ const students = [{
     petName: "Walter"
 
 
-}
+},
+{
+    name: "David",
+    surname: "Bodrug",
+    age: 22,
+    city: "Milano",
+    hobby: "Gym",
+    favoriteFood: "Sushi",
+    favoriteVideoGame: "COD",
+    favoriteFilm: "Joker",
+    favoriteBook: "you & me",
+    petName: "Pollon"
+
+
+},
 
 ]
 
@@ -99,3 +113,15 @@ function calculateMiddleAge(students) {
 
   // chiamata della funzione
   calculateMiddleAge(students);
+
+  
+  function petName(students) {
+
+ students.forEach(element => { 
+    if(element.petName !== "") {
+    console.log(element.name + ": " + element.petName) }
+
+    
+});
+  }
+  petName(students)
