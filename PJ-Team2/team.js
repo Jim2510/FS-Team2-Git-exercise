@@ -113,3 +113,15 @@ function calculateMiddleAge(students) {
 
   // chiamata della funzione
   calculateMiddleAge(students);
+
+  
+  function petName(students) {
+
+ students.forEach(element => { 
+    if(element.petName !== "") {
+    console.log(element.name + ": " + element.petName) }
+
+    
+});
+  }
+  petName(students)
