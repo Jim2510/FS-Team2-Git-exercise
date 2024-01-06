@@ -1,3 +1,5 @@
+// Dichiarazione array students
+
 const students = [{
     name: "Gabriele",
     surname: "Nicotra",
@@ -25,4 +27,20 @@ const students = [{
     petName: ""
 
 
-}]
+},
+{
+    name: "Gianmarco",
+    surname: "Guglielmino",
+    age: 29,
+    city: "Lodi",
+    hobby: "Music Producer",
+    favoriteFood: "Italian food",
+    favoriteVideoGame: "Counter Strike",
+    favoriteFilm: "Casino",
+    favoriteBook: "LOTR",
+    petName: "Walter"
+
+
+}
+
+]
