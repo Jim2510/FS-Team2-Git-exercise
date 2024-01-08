@@ -10,7 +10,7 @@ const students = [{
         favoriteVideoGame: "Call of Duty",
         favoriteFilm: "A clockwork orange",
         favoriteBook: "1984",
-        petName: ""
+        petName: null
     },
     {
         name: "Felice",
@@ -20,9 +20,9 @@ const students = [{
         hobby: "Cinema",
         favoriteFood: "Sushi",
         favoriteVideoGame: "",
-        favoriteFilm: "",
-        favoriteBook: "",
-        petName: ""
+        favoriteFilm: null,
+        favoriteBook: null,
+        petName: null
     },
     {
         name: "Gianmarco",
@@ -53,14 +53,10 @@ const students = [{
 
 // Funzione che prende come parametro un array e cicla gli elementi riordinati in ordine alfabetico tramite il metodo sort
 
-function orderStudents(student) {
-    student.sort((a, b) => {
-        if (a.surname < b.surname) {
-            return -1;
-        } else {
-            return 1;
-        }
-    }).forEach(element => console.log(`${element.surname} ${element.name}`))
+const orderBySurname = (array = []) => {
+    return array.sort((a, b) => {
+        return a.surname.localeCompare(b.surname)
+    })
 }
 
 // FELICE
@@ -112,8 +108,8 @@ function petName(students) {
 
 
 // Chiamata delle funzioni
-console.log('Students in alphabetical order: ')
-orderStudents(students)
+console.log(`Students in alphabetical order: `, orderBySurname(students))
+
 console.log('Students in age order: ')
 orderAge(students)
 calculateMiddleAge(students)
