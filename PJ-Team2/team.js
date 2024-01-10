@@ -50,22 +50,10 @@ const students = [{
     }
 ]
 
-
-// Funzione che prende come parametro un array e cicla gli elementi riordinati in ordine alfabetico tramite il metodo sort
-
-const orderBySurname = (array = []) => {
-    return array.sort((a, b) => {
-        return a.surname.localeCompare(b.surname)
-    })
-}
+const orderBySurname = (array = []) =>  array.sort((a, b) => a.surname.localeCompare(b.surname));
 
 // FELICE
 
-
-
-
-/*Creo una funzione che mi ritorna un array ordinato per età crescente(utilizzando il metodo sort che compara le proprietà age degli oggetti).
-Tramite il metodo foreach mi stampo il nome e l'età degli oggetti*/
 
 function orderAge(students) {
     return students.sort((student, student2) => student.age - student2.age)
@@ -75,28 +63,13 @@ function orderAge(students) {
 // GABRIELE
 
 
-
-// Utilizzo metodo map per restituire un array contentente solo le proprietà ages alla quale viene applicato il sort per mettere in ordine
-// gli elementi e viene quindi calcolato l'indice corrispondente all'età centrale. 
-// se l'array ha una lunghezza pari, verrà presa l'età a metà tra i due valori centrali tramite il metodo find.
-
-function calculateMiddleAge(students) {
-    const ages = students.map(student => student.age).sort((a, b) => a - b)
-    const middleIndex = Math.floor(ages.length / 2)
-    const middleAge = ages[middleIndex]
-    const middleAgedStudent = students.find(student => student.age === middleAge)
-    console.log(`Middle age student: ${middleAgedStudent.name} - ${middleAgedStudent.age}`)
-}
+const middleAge = (array = []) => Math.floor(array.reduce((sum, stud) => sum + stud.age, 0) / array.length)
 
 // GIANMARCO
 
-
-
-// funzione che cicla gli elementi dell'array e valuta se la proprietà petName non è una stringa vuota e ne ritorna il valore della proprietà
-
 function petName(students) {
     students.forEach(element => {
-        if (element.petName !== "") {
+        if (element.petName !== null) {
             console.log(element.name + ": " + element.petName)
         }
     });
@@ -109,9 +82,7 @@ function petName(students) {
 
 // Chiamata delle funzioni
 console.log(`Students in alphabetical order: `, orderBySurname(students))
-
-console.log('Students in age order: ')
 orderAge(students)
-calculateMiddleAge(students)
+console.log('Età media: ', middleAge(students))
 console.log('Students with pets: ')
 petName(students)
